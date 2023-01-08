@@ -1,0 +1,3 @@
+const DotGroup = ({selectedPage, setSelectedPage}) => {
+    
+}
