@@ -1,18 +1,18 @@
 import Navbar from "./scenes/Navbar";
 import DotGroup from "./scenes/DotGroup";
 import Landing from "./scenes/Landing";
-import MySkills from "./scenes/MySkills";
-import Projects from "./scenes/Projects";
-import Testimonials from "./scenes/Testimonials";
+import Expertise from "./scenes/Expertise";
+/* import Projets from "./scenes/Projets"; */
 import Contact from "./scenes/Contact";
 import Footer from "./scenes/Footer";
 import LineGradient from "./components/LineGradient";
 import useMediaQuery from "./hooks/useMediaQuery";
 import { useEffect, useState } from "react";
+import Projets from "./components/portfolio/Portfolio";
 
 
 function App() {
-  const [selectedPage, setSelectedPage] = useState("home");
+  const [selectedPage, setSelectedPage] = useState("accueil");
   const [isTopOfPage, setIsTopOfPage] = useState(true);
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
 
@@ -25,9 +25,9 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div className="app bg-deep-blue">
+    <div className="app">
       <Navbar isTopOfPage={isTopOfPage} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-      <div className="w-5/6 mx-auto md:h-full">
+      <div className="md:w-5/6 mx-auto md:h-full">
         {isAboveMediumScreens && (
           <DotGroup
             selectedPage={selectedPage}
@@ -37,19 +37,22 @@ function App() {
         <Landing setSelectedPage={setSelectedPage} />
       </div>
       <LineGradient />
-      <div className="w-5/6 mx-auto md:h-full">
-        <MySkills />
+      <div className="md:w-5/6 mx-auto">
+        <Expertise />
       </div>
-      <LineGradient />
+      {/* <LineGradient />
       <div className="w-5/6 mx-auto">
         <Projects />
-      </div>
+      </div> */}
       <LineGradient />
-      <div className="w-5/6 mx-auto md:h-full">
-        <Testimonials />
+      <div className="bg-light-grey p-5">
+        <div className="md:w-5/6 mx-auto">
+          <Projets />
+        </div>
       </div>
+
       <LineGradient />
-      <div className="w-5/6 mx-auto md:h-full">
+      <div className="md:w-5/6 mx-auto mb-20">
         <Contact />
       </div>
       <Footer />

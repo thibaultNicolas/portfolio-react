@@ -21,7 +21,7 @@ const Project = ({ title }) => {
     return (
         <motion.div variants={projectVariant} className="relative">
             <div className={overlayStyles}>
-                <p className="text-2xl font-playfair">{title}</p>
+                <p className="text-2xl font-poppins">{title}</p>
                 <p className="mt-7">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
@@ -37,9 +37,9 @@ const Projects = () => {
     const isAboveMediumScreens = useMediaQuery('(min-width:1060px)');
 
     return (
-        <section id="projects" className="pt-48 pb-48">
+        <section id="projets" className="pt-48 pb-48">
             {/* HEADINGS */}
-            <div className="md:flex md:justify-between md:gap-16 mt-32">
+            <div className="md:flex md:justify-between md:gap-16 mt-15">
                 <motion.div
                     className="md:w-2/5 mx-auto text-center"
                     initial="hidden"
@@ -52,23 +52,17 @@ const Projects = () => {
                     }}
                 >
                     <div>
-                        <p className="font-playfair font-semibold text-4xl">
-                            MY <span className="text-red">PRO</span>JECTS
-                        </p>
+                    <p className="font-poppins font-semibold text-6xl mb-5">
+                        MES PROJETS
+                    </p>
                         <div className="flex justify-center mt-5">
                             <LineGradient width="w-1/3" />
                         </div>
                     </div>
-
-                    <p className="mt-10 mb-10">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam.
-                    </p>
                 </motion.div>
             </div>
             {/* PROJECTS */}
-            <div className="flex justify-center">
+            <div className="flex justify-center mt-20">
                 <motion.div
                     className="sm:grid sm:grid-cols-2 md:grid-cols-3"
                     initial="hidden"
@@ -77,7 +71,7 @@ const Projects = () => {
                     variants={container}
                 >
                     {/* ROW 1 */}
-                    <div className="flex justify-center text-center items-center p-10 bg-red max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold">
+                    <div className="flex justify-center text-center items-center p-10 bg-red max-w-[400px] max-h-[400px] text-2xl font-poppins font-semibold">
                         BEAUTIFUL USER INTERFACES
                     </div>
 
@@ -93,7 +87,7 @@ const Projects = () => {
                     <Project title="Project 6" />
                     <Project title="Project 7" />
 
-                    <div className="flex justify-center text-center items-center p-10 bg-blue max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold">
+                    <div className="flex justify-center text-center items-center p-10 bg-blue max-w-[400px] max-h-[400px] text-2xl font-poppins font-semibold">
                         SMOOTH USER INTERFACES
                     </div>
                 </motion.div>

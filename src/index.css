@@ -1,14 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;600&family=Poppins:wght@600&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-html, 
-body, 
-#root, 
-.app{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body,
+#root,
+.app {
     height: 100%;
-    background-color: #010026;
-    @apply text-white;
+    /*  background-color: #010026; */
+    @apply text-deep-blue;
+}
+.icon {
+    max-width: 125px;
+    margin: 0 auto;
+    object-fit: contain;
+}
+.skills-img {
+    max-height: 400px;
+    margin: 0 auto;
+    margin-top: 4rem;
+}
+.list-skills li {
+}
+.container {
+    margin: 0 auto;
+}
+footer .footer-icon a img {
+    filter: brightness(1);
 }

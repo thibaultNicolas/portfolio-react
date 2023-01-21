@@ -5,12 +5,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        blue: '#2CBCE9',
+        blue: '#004bc6',
         red: '#DC4492',
         yellow: '#FDCC49',
         grey: '#ededed',
         "deep-blue": '#010026',
+        "beige": '#010026',
         "dark-grey": '#757575',
+        "light-grey": '#e1e1e1',
         "opaque-black": 'rgba(0,0,0,0.35)'
       },
       backgroundImage: (theme) => ({
@@ -22,7 +24,8 @@ module.exports = {
       }),
       fontFamily: {
         playfair: ["playfair Display", "serif"],
-        openSans: ["Open Sans", "sans-serif"]
+        openSans: ["Open Sans", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"]
       },
       content: {
         brush: "url('./assets/brush.png')",

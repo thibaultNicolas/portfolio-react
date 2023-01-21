@@ -17,29 +17,27 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className="py-48">
-            {/* HEADING */}
-            <motion.div
-                className="flex justify-end w-full"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.5 }}
-                variants={{
-                    hidden: { opacity: 0, x: -50 },
-                    visible: { opacity: 1, x: 0 },
-                }}
-            >
-                <div>
-                    <p className="font-playfair font-semibold text-4xl">
-                        <span className="text-yellow">CONTACT ME</span> TO GET
-                        STARTED
+        <section id="contact" className="py-25">
+            {/* HEADER AND IMAGE SECTION */}
+            <div className="text-center mt-20 mb-20">
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ duration: 0.5 }}
+                    variants={{
+                        hidden: { opacity: 0, x: -50 },
+                        visible: { opacity: 1, x: 0 },
+                    }}
+                >
+                    <p className="font-poppins font-semibold text-6xl mb-5">
+                        ME CONTACTER
                     </p>
-                    <div className="flex md:justify-end my-5">
-                        <LineGradient width="w-1/2" />
+                    <div className="flex justify-center mt-5">
+                        <LineGradient width="w-1/3" />
                     </div>
-                </div>
-            </motion.div>
+                </motion.div>
+            </div>
             {/* FORM & IMAGE */}
             <div className="md:flex md:justify-between gap-16 mt-5">
                 <motion.div
@@ -53,10 +51,14 @@ const Contact = () => {
                         visible: { opacity: 1, y: 0 },
                     }}
                 >
-                    <img src="../assets/contact-image.jpeg" alt="contact" />
+                    <img
+                        src="../assets/contact.png"
+                        alt="contact"
+                        className="object-contain"
+                    />
                 </motion.div>
                 <motion.div
-                    className="basis-1/2 mt-10 md:mt-0"
+                    className="w-5/6 m-0 m-auto basis-1/2 mt-10 md:mt-0"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.5 }}
@@ -73,9 +75,9 @@ const Contact = () => {
                         method="POST"
                     >
                         <input
-                            className="w-full bg-blue font-semibold placeholder-opaque-black p-3"
+                            className="w-full bg-white border-blue border-2 active:border-blue font-semibold placeholder-opaque-black p-3"
                             type="text"
-                            placeholder="NAME"
+                            placeholder="NOM COMPLET"
                             {...register('name', {
                                 required: true,
                                 maxLength: 100,
@@ -91,9 +93,9 @@ const Contact = () => {
                         )}
 
                         <input
-                            className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5"
+                            className="w-full bg-whit border-blue border-2 active:border-blue font-semibold placeholder-opaque-black p-3 mt-5"
                             type="text"
-                            placeholder="EMAIL"
+                            placeholder="COURRIEL"
                             {...register('email', {
                                 required: true,
                                 pattern:
@@ -111,7 +113,7 @@ const Contact = () => {
                         )}
 
                         <textarea
-                            className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5"
+                            className="w-full bg-white text-blue border-blue border-2 active:border-blue font-semibold placeholder-opaque-black p-3 mt-5"
                             type="text"
                             placeholder="MESSAGE"
                             rows="4"
@@ -133,9 +135,9 @@ const Contact = () => {
 
                         <button
                             type="submit"
-                            className="p-5 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-red hover:text-white transition duration-500"
+                            className="p-5 bg-white border-blue border-2 active:border-blue font-semibold text-deep-blue mt-5 hover:bg-blue hover:text-white transition duration-500"
                         >
-                            SEND ME A MESSAGE
+                            ENVOYER
                         </button>
                     </form>
                 </motion.div>
