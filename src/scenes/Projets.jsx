@@ -37,7 +37,7 @@ const Projects = () => {
     const isAboveMediumScreens = useMediaQuery('(min-width:1060px)');
 
     return (
-        <section id="projets" className="pt-48 pb-48">
+        <section id="projets" className="pt-48 pb-48 w-5/6 mx-auto">
             {/* HEADINGS */}
             <div className="md:flex md:justify-between md:gap-16 mt-15">
                 <motion.div
@@ -52,9 +52,9 @@ const Projects = () => {
                     }}
                 >
                     <div>
-                    <p className="font-poppins font-semibold text-6xl mb-5">
-                        MES PROJETS
-                    </p>
+                        <p className="font-poppins font-semibold text-6xl mb-5">
+                            MES PROJETS
+                        </p>
                         <div className="flex justify-center mt-5">
                             <LineGradient width="w-1/3" />
                         </div>

@@ -6,7 +6,7 @@ const Expertise = () => {
     const isAboveMediumScreens = useMediaQuery('(min-width:1060px)');
 
     return (
-        <section id="expertise" className="pt-10 pb-24">
+        <section id="expertise" className="pt-10 pb-24 w-5/6 mx-auto">
             {/* HEADER AND IMAGE SECTION */}
             <div className="text-center mt-32">
                 <motion.div

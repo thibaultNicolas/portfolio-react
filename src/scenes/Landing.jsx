@@ -32,7 +32,7 @@ const Landing = ({ setSelectedPage }) => {
             </div>
 
             {/* MAIN SECTION */}
-            <div className="z-30 basis-1/2 mt-12 md:mt-32">
+            <div className="z-30 basis-1/2 mt-12 md:mt-32 p-5">
                 {/* HEADING SECTION */}
                 <motion.div
                     initial="hidden"
@@ -54,7 +54,7 @@ const Landing = ({ setSelectedPage }) => {
                             Thibault
                         </span>
                     </p>
-                    <p className="mt-10 mb-7 text-sm text-center md:text-start">
+                    <p className="mt-10 mb-7 text-sm text-center md:text-start w-5/6 mx-auto">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
                         magna aliqua. Ut enim ad minim veniam.
