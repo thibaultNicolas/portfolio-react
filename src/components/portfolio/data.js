@@ -1,65 +1,73 @@
 const data = [{
     id: 1,
-    cover: "../assets/project-1.jpeg",
-    title: "Projet 1",
-    category: "Design",
-
+    cover: "../assets/projets/brulerie.png",
+    title: "La brulerie",
+    category: "design",
+    github: "",
 },
 {
     id: 2,
-    cover: "../assets/project-2.jpeg",
-    title: "Projet 1",
-    category: "programmation",
-
+    cover: "../assets/projets/creox.png",
+    title: "Agence Creox",
+    category: "design",
+    github: "",
 },
 {
     id: 3,
-    cover: "../assets/project-3.jpeg",
+    cover: "../assets/projets/formation_csf.png",
     title: "Projet 1",
-    category: "programmation",
-
+    category: "design",
+    github: "",
 },
 {
     id: 4,
-    cover: "../assets/project-4.jpeg",
-    title: "Projet 1",
+    cover: "../assets/projets/nike.png",
+    title: "Refonte site Nike",
     category: "integration",
+    github: "",
 
 },
 {
     id: 5,
-    cover: "../assets/project-5.jpeg",
-    title: "Projet 1",
-    category: "integration",
-
+    cover: "../assets/projets/off.png",
+    title: "Le festival OFF",
+    category: "design",
+    github: "",
 },
 {
     id: 6,
-    cover: "../assets/project-6.jpeg",
-    title: "Projet 1",
-    category: "Design",
-
+    cover: "../assets/projets/ouest.png",
+    title: "Un voyage dans l'ouest Canadien",
+    category: "design",
+    github: "",
 },
 {
     id: 7,
-    cover: "../assets/project-7.jpeg",
-    title: "Projet 1",
-    category: "multimedia",
-
+    cover: "../assets/projets/pagaie_qc.png",
+    title: "Pagaie Québec",
+    category: "design",
+    github: "",
 },
 {
     id: 8,
-    cover: "../assets/project-8.jpeg",
-    title: "Projet 1",
-    category: "multimedia",
-
+    cover: "../assets/projets/pasteques.png",
+    title: "Librairie La Pastèque",
+    category: "integration",
+    github: "",
 },
 {
     id: 9,
-    cover: "../assets/project-9.jpeg",
-    title: "Projet 1",
-    category: "Design",
-
+    cover: "../assets/projets/skicanada.png",
+    title: "Page d'accueil Ski Canada",
+    category: "design",
+    github: "",
+},
+{
+    id: 10,
+    cover: "../assets/projets/tim.png",
+    title: "Site de la Tim",
+    category: "integration",
+    github: "",
 },
 ]
 
