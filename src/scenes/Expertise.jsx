@@ -49,7 +49,7 @@ const Expertise = () => {
                                     src="../assets/settings.png"
                                     alt="back-end"
                                 />{' '}
-                                Développement <br></br> Front-End
+                                Développement <br></br> Back-End
                             </p>
                             <div className="my-5 text-center">
                                 <ul className="list-skills">
@@ -84,7 +84,7 @@ const Expertise = () => {
                                     src="../assets/atom.png"
                                     alt="front-end"
                                 />{' '}
-                                Développement <br></br> Back-End
+                                Développement <br></br> Front-End
                             </p>
                             <div className="my-5 text-center">
                                 <ul className="list-skills">
