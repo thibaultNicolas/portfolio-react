@@ -19,12 +19,9 @@ const Expertise = () => {
                         visible: { opacity: 1, x: 0 },
                     }}
                 >
-                    <p className="font-poppins font-semibold text-6xl mb-5">
+                    <h2 className="font-poppins font-semibold text-6xl mb-5">
                         MON EXPERTISE
-                    </p>
-                    <div className="flex justify-center mt-5">
-                        <LineGradient width="w-1/3" />
-                    </div>
+                    </h2>
                 </motion.div>
             </div>
             {/* Expertise */}

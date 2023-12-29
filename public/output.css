@@ -708,9 +708,42 @@ video {
     color: rgb(253 204 73 / var(--tw-text-opacity));
 }
 
-.text-deep-blue {
+.text-white {
     --tw-text-opacity: 1;
-    color: rgb(1 0 38 / var(--tw-text-opacity));
+    color: #fff;
+}
+
+.text-black {
+    --tw-text-opacity: 1;
+    color: #100c0d;
+}
+
+.text-salmon {
+    --tw-text-opacity: 1;
+    color: #cc8b65;
+}
+
+.text-forest-green {
+    --tw-text-opacity: 1;
+    color: #013328;
+}
+.text-beige {
+    --tw-text-opacity: 1;
+    color: #e3dcd2;
+}
+
+.bg-forest-green {
+    background-color: #013328;
+}
+
+.bg-beige {
+    background-color: #e3dcd2;
+}
+.bg-salmon {
+    background-color: #cc8b65;
+}
+.bg-black {
+    background-color: #100c0d;
 }
 
 .transition {

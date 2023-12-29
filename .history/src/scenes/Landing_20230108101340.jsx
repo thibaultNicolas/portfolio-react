@@ -1,3 +1,0 @@
-const Landing = ({setSelectedPage})=> {
-    
-}

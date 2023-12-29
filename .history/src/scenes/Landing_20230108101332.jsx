@@ -1,1 +1,0 @@
-const Landing = ({set})

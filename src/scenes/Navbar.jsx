@@ -4,16 +4,14 @@ import useMediaQuery from '../hooks/useMediaQuery';
 
 const Link = ({ page, selectedPage, setSelectedPage, isTopOfPage }) => {
     const lowerCasePage = page.toLowerCase();
-    const navbarTextColor = isTopOfPage
-        ? 'text-blue border-blue'
-        : 'text-white border-white';
+    const navbarTextColor = isTopOfPage ? 'text-beige border-beige' : '';
 
     return (
         <AnchorLink
             className={`${
                 selectedPage === lowerCasePage ? 'border-b-2 -mb-2' : ''
             }
-             transition duration-500 hover:border-b-2 border-blue -mb-2 ${navbarTextColor}`}
+             transition duration-500 hover:border-b-2 -mb-2 ${navbarTextColor}`}
             href={`#${lowerCasePage}`}
             onClick={() => setSelectedPage(lowerCasePage)}
         >
@@ -25,21 +23,30 @@ const Link = ({ page, selectedPage, setSelectedPage, isTopOfPage }) => {
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
     const [isMenuToggled, setIsMenuToggled] = useState(false);
     const isAboveSmallScreens = useMediaQuery('(min-width:768px)');
-    const navbarBackground = isTopOfPage ? '' : 'bg-blue';
-    const logoColor = isTopOfPage ? 'text-blue' : 'text-white';
+    const navbarBackground = isTopOfPage ? '' : '';
+    const logoColor = isTopOfPage ? 'text-beige' : '';
 
     return (
-        <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
+        <nav className={`${navbarBackground} z-40 w-full py-6`}>
             <div className="flex items-center justify-between mx-auto w-5/6">
-                <h4 className={`${logoColor} font-poppins text-3xl font-bold`}>
+                <a
+                    href="/"
+                    className={`${logoColor} font-poppins text-3xl font-bold`}
+                >
                     Thibault.
-                </h4>
+                </a>
 
                 {/* DESKTOP NAV */}
                 {isAboveSmallScreens ? (
                     <div className="flex justify-between gap-16 font-openSans txt-sm font-semibold font-poppins">
                         <Link
                             page="Accueil"
+                            selectedPage={selectedPage}
+                            setSelectedPage={setSelectedPage}
+                            isTopOfPage={isTopOfPage}
+                        />
+                        <Link
+                            page="About"
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
                             isTopOfPage={isTopOfPage}
@@ -65,7 +72,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
                     </div>
                 ) : (
                     <button
-                        className="rounded-full bg-deep-blue p-2"
+                        className="rounded-full bg-salmon p-2"
                         onClick={() => setIsMenuToggled(!isMenuToggled)}
                     >
                         <img src="../assets/menu-icon.svg" alt="menu-icon" />
@@ -74,7 +81,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
 
                 {/* MOBILE MENU POPUP */}
                 {!isAboveSmallScreens && isMenuToggled && (
-                    <div className="fixed right-0 bottom-0 h-full bg-blue w-[300px]">
+                    <div className="fixed z-40 right-0 bottom-0 h-full bg-forest-green w-[100%]">
                         {/* CLOSE ICON */}
                         <div className="flex justify-end p-12">
                             <button
@@ -87,11 +94,17 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
                             </button>
                         </div>
                         {/* MENU ITEMS */}
-                        <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
+                        <div className="flex flex-col gap-10 ml-[5%] text-2xl text-white">
                             <Link
                                 page="accueil"
                                 selectedPage={selectedPage}
                                 setSelectedPage={setSelectedPage}
+                            />
+                            <Link
+                                page="About"
+                                selectedPage={selectedPage}
+                                setSelectedPage={setSelectedPage}
+                                isTopOfPage={isTopOfPage}
                             />
                             <Link
                                 page="Expertise"

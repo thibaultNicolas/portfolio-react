@@ -13,8 +13,20 @@ body,
 #root,
 .app {
     height: 100%;
-    /*  background-color: #010026; */
-    @apply text-deep-blue;
+    @apply text-black;
+    background-color: #013328;
+}
+h1 {
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 1.132em;
+}
+.w-100 {
+    width: 100%;
+}
+section {
+    max-width: 1500px;
+    margin: auto;
 }
 .icon {
     max-width: 125px;
@@ -33,4 +45,58 @@ body,
 }
 footer .footer-icon a img {
     filter: brightness(1);
+}
+.text-black {
+    --tw-text-opacity: 1;
+    color: #100c0d;
+}
+
+.text-salmon {
+    --tw-text-opacity: 1;
+    color: #cc8b65;
+}
+
+.text-forest-green {
+    --tw-text-opacity: 1;
+    color: #013328;
+}
+.text-beige {
+    --tw-text-opacity: 1;
+    color: #e3dcd2;
+}
+.border-beige {
+    border-color: #e3dcd2;
+}
+
+.bg-forest-green {
+    background-color: #013328;
+}
+
+.bg-beige {
+    background-color: #e3dcd2;
+}
+.bg-salmon {
+    background-color: #cc8b65;
+}
+.bg-black {
+    background-color: #100c0d;
+}
+.btn-primary-salmon {
+    background-color: #cc8b65;
+    color: #e3dcd2;
+    border-radius: 2rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border: 2px solid #cc8b65;
+}
+.btn-primary-salmon:hover {
+    background-color: #fff;
+    color: #cc8b65;
+    border: 2px solid #cc8b65;
+}
+.border-salmon {
+    border-color: #cc8b65;
+}
+.border-forest-green {
+    border-color: #013328;
 }

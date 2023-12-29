@@ -9,9 +9,12 @@ const Footer = () => {
                 </div>
 
                 <div className="md:flex justify-center md:justify-between text-center">
-                    <h4 className="font-poppins text-3xl font-bold text-white">
+                    <a
+                        href="/"
+                        className="font-poppins text-3xl font-bold text-white"
+                    >
                         Thibault.
-                    </h4>
+                    </a>
                     <p className="font-poppins text-md text-white">
                         @2023 Thibault. All Rights Reserved.
                     </p>

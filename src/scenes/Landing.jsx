@@ -2,7 +2,6 @@ import SocialMediaIcons from '../components/SocialMediaIcons';
 import useMediaQuery from '../hooks/useMediaQuery';
 import { motion } from 'framer-motion';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import cv from '../static/media/thibaultn_cv_2023.pdf';
 
 const Landing = ({ setSelectedPage }) => {
     const isAboveMediumScreens = useMediaQuery('(min-width:1060px)');
@@ -10,29 +9,29 @@ const Landing = ({ setSelectedPage }) => {
     return (
         <section
             id="accueil"
-            className="md:flex md:justify-between md:items-center md:h-full gap-16 py-10"
+            className="bg-forest-green md:flex md:justify-between md:items-center gap-16 py-10 flex"
         >
             {/* IMAGE SECTION */}
-            <div className="md:order-2 flex justify-center basis-1/2 z-10 mt-16 md:mt-32 mb-32">
+            <div className="md:order-2 flex justify-center basis-1/3 z-10">
                 {isAboveMediumScreens ? (
-                    <div className="relative z-0 ml-20 before:absolute before:-top-20 before:-left-20">
+                    <div className="relative z-0">
                         <img
-                            src="assets/profile-image-nicolas-2.png"
+                            src="assets/nic.png"
                             alt="profile"
-                            className="transition duration-500 z-10 w-full max-w-[400px] md:max-w-[500px]"
+                            className="transition duration-500 z-10 w-full w-100"
                         />
                     </div>
                 ) : (
                     <img
-                        src="assets/profile-image-nicolas-2.png"
+                        src="assets/nic.png"
                         alt="profile"
-                        className="transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px]"
+                        className="transition duration-500 z-10 w-full w-100"
                     />
                 )}
             </div>
 
             {/* MAIN SECTION */}
-            <div className="z-30 basis-1/2 mt-12 md:mt-32 p-5">
+            <div className="z-30 basis-2/3 p-5">
                 {/* HEADING SECTION */}
                 <motion.div
                     initial="hidden"
@@ -44,17 +43,10 @@ const Landing = ({ setSelectedPage }) => {
                         visible: { opacity: 1, x: 0 },
                     }}
                 >
-                    <p className="bg-content-brush text-5xl font-poppins z-10 text-center md:text-start">
-                        Nicolas {''}
-                        <span
-                            className="xs:relative xs:text-white xs:font-semibold z-20
-                        xs:before:content-brush before:absolute before:-left-[25px] before:-top-[85px] before:z-[-1]
-                        "
-                        >
-                            Thibault
-                        </span>
-                    </p>
-                    <p className="mt-10 mb-7 text-sm text-center md:text-start w-5/6 mx-auto">
+                    <h1 className="text-beige font-poppins z-10 text-center md:text-start">
+                        Je suis Nicolas Thibault, développeur web.
+                    </h1>
+                    <p className="text-beige mt-10 mb-7 text-sm text-center md:text-start mx-auto">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
                         magna aliqua. Ut enim ad minim veniam.
@@ -74,17 +66,11 @@ const Landing = ({ setSelectedPage }) => {
                     }}
                 >
                     <AnchorLink
-                        className="bg-blue text-white  py-3 px-7 font-semibold hover:bg-deep-blue hover:text-white border-2 border-blue hover:border-deep-blue transition duration-500"
+                        className="btn-primary-salmon transition duration-500"
                         onClick={() => setSelectedPage('contact')}
                         href="#contact"
                     >
                         Me contacter
-                    </AnchorLink>
-                    <AnchorLink
-                        className="bg-white text-blue  py-3 px-7 font-semibold hover:bg-deep-blue hover:text-white border-2 border-blue hover:border-deep-blue transition duration-500"
-                        href={cv}
-                    >
-                        Télécharger mon CV
                     </AnchorLink>
                 </motion.div>
 
