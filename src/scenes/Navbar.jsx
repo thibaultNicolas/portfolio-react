@@ -4,7 +4,9 @@ import useMediaQuery from '../hooks/useMediaQuery';
 
 const Link = ({ page, selectedPage, setSelectedPage, isTopOfPage }) => {
     const lowerCasePage = page.toLowerCase();
-    const navbarTextColor = isTopOfPage ? 'text-beige border-beige' : '';
+    const navbarTextColor = isTopOfPage
+        ? 'text-beige border-beige'
+        : 'text-beige border-beige';
 
     return (
         <AnchorLink
@@ -22,9 +24,9 @@ const Link = ({ page, selectedPage, setSelectedPage, isTopOfPage }) => {
 
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
     const [isMenuToggled, setIsMenuToggled] = useState(false);
-    const isAboveSmallScreens = useMediaQuery('(min-width:768px)');
+    const isAboveSmallScreens = useMediaQuery('(min-width:991px)');
     const navbarBackground = isTopOfPage ? '' : '';
-    const logoColor = isTopOfPage ? 'text-beige' : '';
+    const logoColor = isTopOfPage ? 'text-beige' : 'text-beige';
 
     return (
         <nav className={`${navbarBackground} z-40 w-full py-6`}>
@@ -38,7 +40,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
 
                 {/* DESKTOP NAV */}
                 {isAboveSmallScreens ? (
-                    <div className="flex justify-between gap-16 font-openSans txt-sm font-semibold font-poppins">
+                    <div className="flex justify-between gap-16 txt-sm font-semibold">
                         <Link
                             page="Accueil"
                             selectedPage={selectedPage}

@@ -51,13 +51,10 @@ const Projects = () => {
                         visible: { opacity: 1, x: 0 },
                     }}
                 >
-                    <div>
-                        <p className="font-poppins font-semibold text-6xl mb-5">
-                            MES PROJETS
-                        </p>
-                        <div className="flex justify-center mt-5">
-                            <LineGradient width="w-1/3" />
-                        </div>
+                    <div class="col-12">
+                        <h3 className="subtitle text-forest-green font-poppins font-semibold text-6xl mb-5">
+                            <span class="text-salmon">/</span>Projets
+                        </h3>
                     </div>
                 </motion.div>
             </div>

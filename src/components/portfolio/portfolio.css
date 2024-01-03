@@ -13,15 +13,14 @@
 }
 .portfolio li {
     margin-left: 30px;
-    font-size: 17px;
     cursor: pointer;
     transition: 0.5s;
 }
 .portfolio .links li:hover,
 .portfolio .links li.active {
-    background-color: #004bc6;
-    color: white;
-    pad: 5px 10px;
+    background-color: #013328;
+    color: #e3dcd2;
+    padding: 5px 10px;
 }
 .portfolio .links li {
     padding: 5px 10px;
@@ -30,10 +29,13 @@
 .portfolio img {
     object-fit: contain;
     height: 100%;
-    padding: 1rem;
     cursor: pointer;
     margin: 0 auto;
     border-radius: 40px;
+}
+.portfolio-card {
+    border-radius: 2rem;
+    color: #e3dcd2;
 }
 
 .links {
@@ -67,19 +69,19 @@
 .portfolio .overlay {
     position: absolute;
     bottom: 20;
-    width: 92%;
-    margin-left: 1rem;
+    width: 100%;
+    height: 100%;
+    margin-left: 0rem;
     padding: 20px 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    margin-top: -5rem;
+    top: 0;
     opacity: 0;
     transition: 0.5s;
-    background-color: #004bc6;
+    background-color: #013328;
+    border-radius: 2rem;
 }
 .portfolio .box:hover .overlay {
     opacity: 1;

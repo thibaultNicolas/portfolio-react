@@ -26,24 +26,18 @@ function App() {
   return (
     <div className="app">
       <Navbar isTopOfPage={isTopOfPage} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-      <div className="md:w-5/6 mx-auto  md:h-2/3 flex">
+      <div className="md:flex md:justify-center md:items-center">
         <Landing setSelectedPage={setSelectedPage} />
+
       </div>
-      <div className="bg-light-grey p-10  md:h-2/3 md:flex md:justify-between md:items-center">
-        <div className="md:w-5/6 mx-auto container">
-          <About />
-        </div>
+      <div className="bg-light-grey p-10 md:flex md:justify-between md:items-center">
+        <About />
       </div>
-      <div className="md:w-5/6 mx-auto container  md:h-2/3 md:flex md:justify-between md:items-center">
+      <div className="p-10 md:flex md:justify-between md:items-center">
         <Expertise />
       </div>
-      <div className="bg-light-grey p-5  md:h-2/3 md:flex md:justify-between md:items-center">
-        <div className="md:w-5/6 mx-auto container">
-          <Projets />
-        </div>
-      </div>
-      <div className="md:w-5/6 mx-auto mb-20  md:h-2/3 md:flex md:justify-between md:items-center">
-        <Contact />
+      <div className="bg-light-grey p-10 md:flex md:justify-between md:items-center">
+        <Projets />
       </div>
       <Footer />
     </div>
