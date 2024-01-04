@@ -2,7 +2,7 @@ import { useState } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import useMediaQuery from '../hooks/useMediaQuery';
 
-const Link = ({ page, selectedPage, setSelectedPage, isTopOfPage }) => {
+const Link = ({ name, page, selectedPage, setSelectedPage, isTopOfPage }) => {
     const lowerCasePage = page.toLowerCase();
     const navbarTextColor = isTopOfPage
         ? 'text-beige border-beige'
@@ -17,7 +17,7 @@ const Link = ({ page, selectedPage, setSelectedPage, isTopOfPage }) => {
             href={`#${lowerCasePage}`}
             onClick={() => setSelectedPage(lowerCasePage)}
         >
-            {page}
+            {name}
         </AnchorLink>
     );
 };
@@ -42,31 +42,29 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
                 {isAboveSmallScreens ? (
                     <div className="flex justify-between gap-16 txt-sm font-semibold">
                         <Link
-                            page="Accueil"
-                            selectedPage={selectedPage}
-                            setSelectedPage={setSelectedPage}
-                            isTopOfPage={isTopOfPage}
-                        />
-                        <Link
                             page="About"
+                            name="À propos"
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
                             isTopOfPage={isTopOfPage}
                         />
                         <Link
                             page="Expertise"
+                            name="Compétences"
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
                             isTopOfPage={isTopOfPage}
                         />
                         <Link
                             page="Projets"
+                            name="Portfolio"
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
                             isTopOfPage={isTopOfPage}
                         />
                         <Link
-                            page="Contact"
+                            page="footer"
+                            name="Me contacter"
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
                             isTopOfPage={isTopOfPage}

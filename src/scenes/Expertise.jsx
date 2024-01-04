@@ -112,14 +112,18 @@ const Expertise = () => {
                     </motion.div>
                 </div>
                 {/* Expertise */}
-                <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.5 }}
-                    transition={{ duration: 0.5 }}
-                >
-                    <div className="mt-10 cards ">
-                        {dataExpertise.map((d) => (
+                <div className="mt-10 cards">
+                    {dataExpertise.map((d) => (
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.5 }}
+                            transition={{ duration: 0.5 }}
+                            variants={{
+                                hidden: { opacity: 0, x: -50 },
+                                visible: { opacity: 1, x: 0 },
+                            }}
+                        >
                             <div key={d.name} className="expertise-cards mt-5">
                                 <div className="pb-3">
                                     <img
@@ -136,9 +140,9 @@ const Expertise = () => {
                                     <p className="text-l">{d.text}</p>
                                 </div>
                             </div>
-                        ))}
-                    </div>
-                </motion.div>
+                        </motion.div>
+                    ))}
+                </div>
             </div>
         </section>
     );

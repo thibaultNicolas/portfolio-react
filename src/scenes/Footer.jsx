@@ -2,7 +2,10 @@ import SocialMediaIcons from '../components/SocialMediaIcons';
 
 const Footer = () => {
     return (
-        <footer className="h-64 bg-forest-green py-10 mx-auto text-beige">
+        <footer
+            className="h-64 bg-forest-green py-10 mx-auto text-beige"
+            id="footer"
+        >
             <div className="container-default w-container">
                 <div class="row">
                     <div className="col-12 col-md-6">

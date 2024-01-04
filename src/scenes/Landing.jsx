@@ -30,9 +30,9 @@ const Landing = ({ setSelectedPage }) => {
                             Développeur web
                         </h2>
                         <p className="text-beige md:text-start text-item-center  mx-auto">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam.
+                            Passionné d'informatique depuis plusieurs années,
+                            j'adore relever de nouveaux défis, apprendre et
+                            utiliser de nouvelles technologies.
                         </p>
                     </motion.div>
 

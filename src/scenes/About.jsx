@@ -38,19 +38,15 @@ const About = ({ setSelectedPage }) => {
                                     Je développe des sites Web depuis 2020
                                 </h2>
                                 <p>
-                                    Excepteur sint occaecat cupidatat non
-                                    proident, sunt in culpa qui officia deserunt
-                                    mollit anim id est laborum aute irure dolor
-                                    in reprehenderit in voluptate velit esse
-                                    cillum dolore eu fugiat.
+                                    Je suis un développeur passionné de
+                                    technologies, animé par un désir d'apprendre
+                                    depuis mes jours au cégep. J'ai réalisé
+                                    plusieurs projets qui ont renforcé mes
+                                    compétences. Ma curiosité constante et ma
+                                    volonté de relever des défis font de moi un
+                                    développeur polyvalent, prêt à contribuer à
+                                    des projets innovants.
                                 </p>
-                                <AnchorLink
-                                    className="btn-primary-salmon transition duration-500 w-max"
-                                    onClick={() => setSelectedPage('contact')}
-                                    href="#contact"
-                                >
-                                    En savoir plus
-                                </AnchorLink>
                             </div>
                         </div>
                     </motion.div>
