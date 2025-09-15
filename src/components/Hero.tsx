@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ChevronDown } from "lucide-react";
 
@@ -123,63 +123,75 @@ export default function Hero() {
         <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-gray-50 rounded-full blur-3xl opacity-60"></div>
       </div>
 
-      <div className="container mx-auto px-6 text-center relative z-10">
-        <div className="max-w-4xl mx-auto">
-          {/* Greeting */}
-          <div
-            ref={greetingRef}
-            className="text-lg md:text-xl text-gray-600 mb-6 font-light tracking-wide"
-          >
-            Hello, I'm
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+          {/* Left Side - Text Content */}
+          <div className="text-left">
+            {/* Greeting */}
+            <div
+              ref={greetingRef}
+              className="text-lg md:text-xl text-gray-600 mb-6 font-light tracking-wide"
+            >
+              Hello, I'm
+            </div>
+
+            {/* Name */}
+            <h1
+              ref={nameRef}
+              className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 tracking-tight"
+            >
+              Nicolas Thibault
+            </h1>
+
+            {/* Title */}
+            <h2
+              ref={titleRef}
+              className="text-2xl md:text-3xl lg:text-4xl text-gray-700 mb-6 font-light tracking-wide"
+            >
+              Web Developer
+            </h2>
+
+            {/* Description */}
+            <p
+              ref={descriptionRef}
+              className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed font-light"
+            >
+              Creating modern, responsive web experiences with clean code and
+              innovative design.
+            </p>
+
+            {/* CTA Button */}
+            <div ref={buttonRef}>
+              <button
+                onClick={scrollToProjects}
+                className="group inline-flex items-center px-8 py-4 bg-gray-900 text-white font-medium rounded-full hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+              >
+                <span className="mr-2">View My Work</span>
+                <ChevronDown className="w-5 h-5 group-hover:translate-y-1 transition-transform duration-300" />
+              </button>
+            </div>
           </div>
 
-          {/* Name */}
-          <h1
-            ref={nameRef}
-            className="text-6xl md:text-7xl lg:text-8xl font-bold text-gray-900 mb-8 tracking-tight"
-          >
-            Nicolas Thibault
-          </h1>
+          {/* Right Side - Profile Picture */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative">
+              {/* Profile Image Container */}
+              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+                {/* Your actual profile image */}
+                <img
+                  src="/assets/me.jpg"
+                  alt="Nicolas Thibault"
+                  className="w-full h-full object-cover"
+                />
+              </div>
 
-          {/* Title */}
-          <h2
-            ref={titleRef}
-            className="text-3xl md:text-4xl lg:text-5xl text-gray-700 mb-8 font-light tracking-wide"
-          >
-            Web Developer
-          </h2>
-
-          {/* Description */}
-          <p
-            ref={descriptionRef}
-            className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed font-light"
-          >
-            Creating modern, responsive web experiences with clean code and
-            innovative design.
-          </p>
-        </div>
-
-        {/* CTA Button */}
-        <div ref={buttonRef} className="mb-16">
-          <button
-            onClick={scrollToProjects}
-            className="group inline-flex items-center px-8 py-4 bg-gray-900 text-white font-medium rounded-full hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
-          >
-            <span className="mr-2">View My Work</span>
-            <ChevronDown className="w-5 h-5 group-hover:translate-y-1 transition-transform duration-300" />
-          </button>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div
-          ref={scrollRef}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        >
-          <div className="flex flex-col items-center text-gray-400">
-            <span className="text-xs font-medium mb-3 tracking-widest uppercase">
-              Scroll
-            </span>
-            <div className="w-px h-8 bg-gray-300"></div>
+              {/* Decorative Elements */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-blue-200 rounded-full opacity-60 animate-pulse"></div>
+              <div
+                className="absolute -bottom-4 -left-4 w-16 h-16 bg-purple-200 rounded-full opacity-60 animate-pulse"
+                style={{ animationDelay: "1s" }}
+              ></div>
+            </div>
           </div>
         </div>
       </div>

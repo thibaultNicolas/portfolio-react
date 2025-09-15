@@ -160,12 +160,14 @@ export default function About() {
               </div>
             </div>
 
-            {/* Profile Image Placeholder */}
+            {/* Profile Image */}
             <div className="flex justify-center lg:justify-end">
-              <div className="w-80 h-80 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl flex items-center justify-center">
-                <div className="w-64 h-64 bg-gradient-to-br from-blue-200 to-purple-200 rounded-xl flex items-center justify-center">
-                  <div className="text-6xl font-bold text-gray-400">NT</div>
-                </div>
+              <div className="w-80 h-80 rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-blue-100 to-purple-100">
+                <img
+                  src="/assets/computer.jpg"
+                  alt="Nicolas Thibault working on computer"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>

@@ -1,11 +1,21 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import emailjs from "@emailjs/browser";
+import { EMAILJS_CONFIG, EMAIL_TEMPLATE_PARAMS } from "../lib/emailjs.config";
 
 gsap.registerPlugin(ScrollTrigger);
-import { Send, Mail, Phone, MapPin, CheckCircle } from "lucide-react";
+import {
+  Send,
+  Mail,
+  Phone,
+  MapPin,
+  CheckCircle,
+  Github,
+  Linkedin,
+} from "lucide-react";
 
 export default function Contact() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -73,36 +83,59 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    try {
+      // Prepare template parameters
+      const templateParams = {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        title: "Portfolio Contact Form",
+        time: new Date().toLocaleString(),
+      };
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+      // Send email using EmailJS
+      await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
+        templateParams,
+        EMAILJS_CONFIG.PUBLIC_KEY
+      );
 
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: "", email: "", message: "" });
-    }, 3000);
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+
+      // Reset form after 3 seconds
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({ name: "", email: "", message: "" });
+      }, 3000);
+    } catch (error) {
+      console.error("Error sending email:", error);
+      setIsSubmitting(false);
+      // You could add error state handling here
+      alert(
+        "Sorry, there was an error sending your message. Please try again."
+      );
+    }
   };
 
   const contactInfo = [
     {
       icon: Mail,
       label: "Email",
-      value: "hello@nicolasthibault.dev",
-      href: "mailto:hello@nicolasthibault.dev",
+      value: "nicolasthibault@hotmail.ca",
+      href: "mailto:nicolasthibault@hotmail.ca",
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
+      value: "+1 (581) 581-2798",
+      href: "tel:+5818882798",
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "Montreal, Canada",
+      value: "Quebec, Canada",
       href: "#",
     },
   ];
@@ -149,7 +182,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 bg-white"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 bg-white text-gray-900"
                     placeholder="Your name"
                   />
                 </div>
@@ -168,7 +201,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 bg-white"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 bg-white text-gray-900"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -187,7 +220,7 @@ export default function Contact() {
                     onChange={handleInputChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 bg-white resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 bg-white text-gray-900 resize-none"
                     placeholder="Your message"
                   />
                 </div>
@@ -259,22 +292,25 @@ export default function Contact() {
                 </h4>
                 <div className="flex space-x-4">
                   <a
-                    href="https://github.com"
-                    className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-gray-900 hover:text-white transition-all duration-300"
+                    href="https://github.com/thibaultNicolas"
+                    className="group w-10 h-10 flex items-center justify-center text-blue-600 hover:text-blue-800 transition-all duration-300 transform hover:scale-110"
+                    aria-label="GitHub"
                   >
-                    <span className="text-sm font-bold">GH</span>
+                    <Github className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
                   </a>
                   <a
-                    href="https://linkedin.com"
-                    className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-gray-900 hover:text-white transition-all duration-300"
+                    href="https://www.linkedin.com/in/thibault-nicolas29/"
+                    className="group w-10 h-10 flex items-center justify-center text-blue-600 hover:text-blue-800 transition-all duration-300 transform hover:scale-110"
+                    aria-label="LinkedIn"
                   >
-                    <span className="text-sm font-bold">LI</span>
+                    <Linkedin className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
                   </a>
                   <a
-                    href="https://twitter.com"
-                    className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-gray-900 hover:text-white transition-all duration-300"
+                    href="mailto:nicolasthibault@hotmail.ca"
+                    className="group w-10 h-10 flex items-center justify-center text-blue-600 hover:text-blue-800 transition-all duration-300 transform hover:scale-110"
+                    aria-label="Email"
                   >
-                    <span className="text-sm font-bold">TW</span>
+                    <Mail className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
                   </a>
                 </div>
               </div>

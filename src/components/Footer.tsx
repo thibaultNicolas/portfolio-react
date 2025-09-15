@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -30,21 +30,23 @@ export default function Footer() {
       );
 
       // Stagger animation for content
-      gsap.fromTo(
-        contentRef.current?.children,
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.6,
-          ease: "power3.out",
-          stagger: 0.1,
-          scrollTrigger: {
-            trigger: footerRef.current,
-            start: "top 85%",
-          },
-        }
-      );
+      if (contentRef.current?.children) {
+        gsap.fromTo(
+          contentRef.current.children,
+          { opacity: 0, y: 30 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            ease: "power3.out",
+            stagger: 0.1,
+            scrollTrigger: {
+              trigger: footerRef.current,
+              start: "top 85%",
+            },
+          }
+        );
+      }
     }, footerRef);
 
     return () => ctx.revert();
@@ -64,17 +66,17 @@ export default function Footer() {
   const socialLinks = [
     {
       icon: Github,
-      href: "https://github.com/nicolasthibault",
+      href: "https://github.com/thibaultNicolas",
       label: "GitHub",
     },
     {
       icon: Linkedin,
-      href: "https://linkedin.com/in/nicolasthibault",
+      href: "https://www.linkedin.com/in/thibault-nicolas29/",
       label: "LinkedIn",
     },
     {
       icon: Mail,
-      href: "mailto:hello@nicolasthibault.dev",
+      href: "mailto:nicolasthibault@hotmail.ca",
       label: "Email",
     },
   ];
@@ -130,15 +132,15 @@ export default function Footer() {
               <div className="space-y-2 mb-6">
                 <div className="flex items-center text-gray-600">
                   <MapPin className="w-4 h-4 mr-3 text-gray-400" />
-                  <span className="text-sm">Montreal, Canada</span>
+                  <span className="text-sm">Quebec, Canada</span>
                 </div>
                 <div className="flex items-center text-gray-600">
                   <Phone className="w-4 h-4 mr-3 text-gray-400" />
-                  <span className="text-sm">+1 (555) 123-4567</span>
+                  <span className="text-sm">+1 (581) 888-2798</span>
                 </div>
                 <div className="flex items-center text-gray-600">
                   <Mail className="w-4 h-4 mr-3 text-gray-400" />
-                  <span className="text-sm">hello@nicolasthibault.dev</span>
+                  <span className="text-sm">nicolasthibault@hotmail.ca</span>
                 </div>
               </div>
 
@@ -148,10 +150,10 @@ export default function Footer() {
                   <a
                     key={index}
                     href={link.href}
-                    className="group w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-gray-900 hover:text-white transition-all duration-300 transform hover:scale-110"
+                    className="group w-10 h-10 flex items-center justify-center text-blue-600 hover:text-blue-800 transition-all duration-300 transform hover:scale-110"
                     aria-label={link.label}
                   >
-                    <link.icon className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
+                    <link.icon className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
                   </a>
                 ))}
               </div>
