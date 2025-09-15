@@ -4,11 +4,11 @@ import { getMessages } from "next-intl/server";
 import { Inter } from "next/font/google";
 import "../globals.css";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
+// const inter = Inter({
+//   subsets: ["latin"],
+//   variable: "--font-inter",
+//   display: "swap",
+// });
 
 export const metadata: Metadata = {
   title: "Nicolas Thibault - Web Developer",

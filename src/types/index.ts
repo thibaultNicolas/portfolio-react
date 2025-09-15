@@ -32,5 +32,5 @@ export interface AnimationConfig {
 
 export interface Locale {
   locale: "en" | "fr";
-  messages: Record<string, any>;
+  messages: Record<string, string>;
 }

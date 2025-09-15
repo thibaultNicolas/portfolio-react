@@ -5,15 +5,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
-import {
-  Code,
-  Palette,
-  Database,
-  Smartphone,
-  Globe,
-  Zap,
-  CheckCircle,
-} from "lucide-react";
+import { Code, Database, Globe, Zap, CheckCircle } from "lucide-react";
 
 export default function About() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -172,8 +164,8 @@ export default function About() {
             {/* Bio */}
             <div className="space-y-6">
               <p className="text-lg text-gray-700 leading-relaxed">
-                I'm a dedicated web developer with expertise in React, Next.js,
-                and modern web technologies. I love creating beautiful,
+                I&apos;m a dedicated web developer with expertise in React,
+                Next.js, and modern web technologies. I love creating beautiful,
                 functional, and user-friendly applications that make a
                 difference.
               </p>
@@ -239,7 +231,7 @@ export default function About() {
           <div className="text-center mt-16">
             <div className="inline-flex items-center space-x-2 px-6 py-3 bg-gray-900 text-white font-medium rounded-full hover:bg-gray-800 transition-all duration-300 cursor-pointer">
               <Zap className="w-5 h-5" />
-              <span>Let's work together</span>
+              <span>Let&apos;s work together</span>
             </div>
           </div>
         </div>

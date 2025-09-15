@@ -1,8 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import { Menu, X, Globe } from "lucide-react";
+import { Globe } from "lucide-react";
 import { gsap } from "gsap";
 
 export default function Header() {

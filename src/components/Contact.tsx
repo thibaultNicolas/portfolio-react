@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import emailjs from "@emailjs/browser";
-import { EMAILJS_CONFIG, EMAIL_TEMPLATE_PARAMS } from "../lib/emailjs.config";
+import { EMAILJS_CONFIG } from "../lib/emailjs.config";
 
 gsap.registerPlugin(ScrollTrigger);
 import {
@@ -159,7 +159,7 @@ export default function Contact() {
             Get In Touch
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto font-light">
-            Let's discuss your next project
+            Let&apos;s discuss your next project
           </p>
         </div>
 
@@ -257,9 +257,9 @@ export default function Contact() {
                   Get in Touch
                 </h3>
                 <p className="text-gray-600 leading-relaxed mb-8">
-                  I'm always interested in new opportunities and exciting
+                  I&apos;m always interested in new opportunities and exciting
                   projects. Whether you have a question or just want to say hi,
-                  I'll try my best to get back to you!
+                  I&apos;ll try my best to get back to you!
                 </p>
               </div>
 

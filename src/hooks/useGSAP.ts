@@ -52,7 +52,7 @@ export const useScrollAnimation = (
       stagger = 0,
     } = options;
 
-    let animationConfig: gsap.TweenVars = {
+    const animationConfig: gsap.TweenVars = {
       duration,
       delay,
       ease,

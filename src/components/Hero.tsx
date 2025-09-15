@@ -132,7 +132,7 @@ export default function Hero() {
               ref={greetingRef}
               className="text-lg md:text-xl text-gray-600 mb-6 font-light tracking-wide"
             >
-              Hello, I'm
+              Hello, I&apos;m
             </div>
 
             {/* Name */}
