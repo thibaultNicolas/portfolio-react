@@ -75,43 +75,6 @@ export default function Header() {
               </button>
             ))}
           </div>
-
-          {/* Language Switcher & Mobile Menu */}
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-2">
-              <button
-                onClick={toggleLanguage}
-                className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium text-sm"
-              >
-                <Globe className="w-4 h-4" />
-                <span>{locale === "en" ? "FR" : "EN"}</span>
-              </button>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300"
-            >
-              <div className="w-6 h-6 flex flex-col justify-center space-y-1">
-                <span
-                  className={`block h-0.5 bg-gray-700 transition-all duration-300 ${
-                    isMenuOpen ? "rotate-45 translate-y-1.5" : ""
-                  }`}
-                ></span>
-                <span
-                  className={`block h-0.5 bg-gray-700 transition-all duration-300 ${
-                    isMenuOpen ? "opacity-0" : ""
-                  }`}
-                ></span>
-                <span
-                  className={`block h-0.5 bg-gray-700 transition-all duration-300 ${
-                    isMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
-                  }`}
-                ></span>
-              </div>
-            </button>
-          </div>
         </nav>
 
         {/* Mobile Menu */}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -56,33 +56,30 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
+      title: "Lexya Co.",
       description:
-        "A full-stack e-commerce solution built with Next.js, TypeScript, and Stripe integration.",
-      tech: ["Next.js", "TypeScript", "Stripe", "Tailwind CSS"],
-      github: "https://github.com",
-      demo: "https://demo.com",
-      image: "/api/placeholder/400/300",
+        "Lexya is a company that simplifies and optimizes property management for small landlords through digital tools. A full-stack Next.js solution built with Next.js, Payload CMS, and GSAP animations.",
+      tech: ["Next.js", "Payload CMS", "GSAP", "Tailwind CSS"],
+      demo: "https://lexya.co/",
+      image: "/assets/projets/lexya.png",
     },
     {
       id: 2,
-      title: "Task Management App",
-      description:
-        "A collaborative task management application with real-time updates and team features.",
-      tech: ["React", "Node.js", "Socket.io", "MongoDB"],
-      github: "https://github.com",
-      demo: "https://demo.com",
-      image: "/api/placeholder/400/300",
-    },
-    {
-      id: 3,
       title: "Portfolio Website",
       description:
         "A modern, responsive portfolio website with smooth animations and clean design.",
-      tech: ["Next.js", "GSAP", "Tailwind CSS", "Framer Motion"],
-      github: "https://github.com",
-      demo: "https://demo.com",
-      image: "/api/placeholder/400/300",
+      tech: ["Next.js", "Email.js", "GSAP", "Tailwind CSS"],
+      demo: "https://nicolas-thibault.ca/",
+      image: "/assets/projets/portfolio.png",
+    },
+    {
+      id: 3,
+      title: "Game Changer Hockey",
+      description:
+        "A modern, responsive E-commerce website built with Shopify.",
+      tech: ["Shopify", "JavaScript", "Liquid"],
+      demo: "https://gamechangerhockey.ca/",
+      image: "/assets/projets/gamechangerhockey.png",
     },
   ];
 
@@ -132,9 +129,22 @@ export default function Projects() {
               onMouseLeave={handleProjectLeave}
             >
               {/* Project Image */}
-              <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden">
+              <div className="aspect-video relative overflow-hidden">
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+                    <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
+                      <ArrowRight className="w-8 h-8 text-gray-400" />
+                    </div>
+                  </div>
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
                     <ArrowRight className="w-8 h-8 text-white" />
                   </div>
@@ -164,20 +174,24 @@ export default function Projects() {
 
                 {/* Project Links */}
                 <div className="flex space-x-4">
-                  <a
-                    href={project.github}
-                    className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors duration-300 group/link"
-                  >
-                    <Github className="w-4 h-4 group-hover/link:scale-110 transition-transform duration-300" />
-                    <span className="text-sm font-medium">View Code</span>
-                  </a>
-                  <a
-                    href={project.demo}
-                    className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 transition-colors duration-300 group/link"
-                  >
-                    <ExternalLink className="w-4 h-4 group-hover/link:scale-110 transition-transform duration-300" />
-                    <span className="text-sm font-medium">Live Demo</span>
-                  </a>
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors duration-300 group/link"
+                    >
+                      <Github className="w-4 h-4 group-hover/link:scale-110 transition-transform duration-300" />
+                      <span className="text-sm font-medium">View Code</span>
+                    </a>
+                  )}
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 transition-colors duration-300 group/link"
+                    >
+                      <ExternalLink className="w-4 h-4 group-hover/link:scale-110 transition-transform duration-300" />
+                      <span className="text-sm font-medium">Live Demo</span>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
