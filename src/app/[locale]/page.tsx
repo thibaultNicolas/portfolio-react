@@ -5,7 +5,7 @@ import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
-export default function Home() {
+export default function FrenchHome() {
   return (
     <div className="min-h-screen">
       <Header />

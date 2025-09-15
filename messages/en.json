@@ -1,0 +1,50 @@
+{
+  "navigation": {
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Nicolas Thibault",
+    "title": "Web Developer",
+    "description": "Creating modern, responsive web experiences with clean code and innovative design.",
+    "cta": "View My Work"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "A showcase of my recent work and technical expertise",
+    "viewProject": "View Project",
+    "viewCode": "View Code",
+    "liveDemo": "Live Demo"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Passionate developer with a focus on modern web technologies",
+    "description": "I'm a dedicated web developer with expertise in React, Next.js, and modern web technologies. I love creating beautiful, functional, and user-friendly applications that make a difference.",
+    "skills": {
+      "title": "Technical Skills",
+      "frontend": "Frontend Development",
+      "backend": "Backend Development",
+      "tools": "Tools & Technologies"
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's discuss your next project",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Failed to send message. Please try again."
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "builtWith": "Built with Next.js and ❤️"
+  }
+}

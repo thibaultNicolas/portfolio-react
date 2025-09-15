@@ -1,0 +1,50 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "projects": "Projets",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Bonjour, je suis",
+    "name": "Nicolas Thibault",
+    "title": "Développeur Web",
+    "description": "Créant des expériences web modernes et responsives avec un code propre et un design innovant.",
+    "cta": "Voir Mon Travail"
+  },
+  "projects": {
+    "title": "Projets en Vedette",
+    "subtitle": "Un aperçu de mon travail récent et de mon expertise technique",
+    "viewProject": "Voir le Projet",
+    "viewCode": "Voir le Code",
+    "liveDemo": "Démo Live"
+  },
+  "about": {
+    "title": "À Propos de Moi",
+    "subtitle": "Développeur passionné axé sur les technologies web modernes",
+    "description": "Je suis un développeur web dévoué avec une expertise en React, Next.js et les technologies web modernes. J'aime créer des applications belles, fonctionnelles et conviviales qui font la différence.",
+    "skills": {
+      "title": "Compétences Techniques",
+      "frontend": "Développement Frontend",
+      "backend": "Développement Backend",
+      "tools": "Outils et Technologies"
+    }
+  },
+  "contact": {
+    "title": "Entrons en Contact",
+    "subtitle": "Discutons de votre prochain projet",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Envoyer le Message",
+      "sending": "Envoi en cours...",
+      "success": "Message envoyé avec succès !",
+      "error": "Échec de l'envoi du message. Veuillez réessayer."
+    }
+  },
+  "footer": {
+    "rights": "Tous droits réservés.",
+    "builtWith": "Construit avec Next.js et ❤️"
+  }
+}
