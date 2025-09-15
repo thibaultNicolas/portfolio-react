@@ -53,7 +53,15 @@ export default function Projects() {
   }, []);
 
   // Sample projects data - you can replace with real data
-  const projects = [
+  const projects: Array<{
+    id: number;
+    title: string;
+    description: string;
+    tech: string[];
+    demo: string;
+    image: string;
+    github?: string;
+  }> = [
     {
       id: 1,
       title: "Lexya Co.",
