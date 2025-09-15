@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Globe } from "lucide-react";
 import { gsap } from "gsap";
 
