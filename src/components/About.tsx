@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -80,28 +80,57 @@ export default function About() {
     {
       icon: Code,
       title: "Frontend Development",
-      skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "GSAP"],
+      skills: [
+        "React",
+        "Vue.js",
+        "Next.js",
+        "TypeScript",
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "Sass",
+        "Less",
+        "Bootstrap",
+        "Material UI",
+        "shadcn/ui",
+        "Tailwind CSS",
+        "GSAP",
+      ],
       color: "text-blue-600",
       bgColor: "bg-blue-50",
     },
     {
       icon: Database,
       title: "Backend Development",
-      skills: ["Node.js", "Express", "MongoDB", "PostgreSQL", "REST APIs"],
+      skills: [
+        "Node.js",
+        "Express",
+        "C#",
+        "PHP",
+        "MongoDB",
+        "PostgreSQL",
+        "MySQL",
+        "REST APIs",
+        "Postman",
+      ],
       color: "text-green-600",
       bgColor: "bg-green-50",
     },
     {
-      icon: Smartphone,
-      title: "Mobile Development",
-      skills: ["React Native", "Expo", "iOS", "Android", "PWA"],
-      color: "text-purple-600",
-      bgColor: "bg-purple-50",
-    },
-    {
       icon: Globe,
       title: "DevOps & Tools",
-      skills: ["Docker", "AWS", "Vercel", "Git", "CI/CD"],
+      skills: [
+        "Docker",
+        "Vercel",
+        "Git",
+        "CI/CD",
+        "WordPress",
+        "Shopify",
+        "PrestaShop",
+        "Figma",
+        "Photoshop",
+        "Illustrator",
+      ],
       color: "text-orange-600",
       bgColor: "bg-orange-50",
     },
@@ -175,7 +204,7 @@ export default function About() {
           {/* Skills Grid */}
           <div
             ref={skillsRef}
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {skillCategories.map((category, index) => (
               <div
